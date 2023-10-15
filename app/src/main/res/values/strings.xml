@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Pancho</string>
+    <string name="correo">Correo</string>
+    <string name="contrasenia">Contraseña</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrasenia2">Reingrese Contraseña</string>
+    <string name="btnIngresar">Ingresar</string>
+    <string name="btnRegistrar">Registrar</string>
+
+</resources>
