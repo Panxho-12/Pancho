@@ -16,18 +16,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public  void login(View v){
+    public  void login(View v) {
         EditText campo1 = this.findViewById(R.id.correo);
         String correo = campo1.getText().toString();
         EditText campo2 = this.findViewById(R.id.contrasenia);
         String contrasenia = campo2.getText().toString();
 
-        if (correo.equals("pancho@gmail.com") && contrasenia.equals("1234")){
-        Intent i = new Intent(this, Principal.class);
-        startActivity(i);
-        }else{
+        if (correo.equals("pancho@gmail.com") && contrasenia.equals("1234")) {
+            Intent i = new Intent(this, Principal.class);
+            startActivity(i);
+        } else {
             Toast.makeText(this, "Error en las credenciales", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void crearCuenta(View v){
+        Intent i = new Intent(this, RegistrarCuenta.class);
+        startActivity(i);
     }
 
 }
