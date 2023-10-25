@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/stast3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Huachi">
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="63dp"
+        android:text="Club Deportivo Huachipato"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text="El Club Deportivo Huachipato es club de fútbol de Chile radicado en la ciudad de Talcahuano de la Región del Biobío. Actualmente juega en la Primera División de Chile. Fue fundado el 7 de junio de 1947 por la compañía chilena siderúrgica Huachipato, que a su vez es administrada por la Compañía de Acero del Pacífico. A partir de 2015, pasa a ser una sociedad anónima deportiva, bajo la denominación de «Huachipato Sociedad Anónima Deportiva Profesional». Huachipato es uno de los seis equipos de ciudades distintas a Santiago en ganar títulos de Primera División, correspondientes a 1974 y 2012 y uno de los doce equipos fuera de Santiago en ganar al menos un título. Es, además, el único equipo de la región del Bío-Bío en conseguir ganar la máxima categoría del fútbol chileno. Registra además 1 título de Segunda División y 2 Campeonatos Regionales. El club es local en el Estadio Huachipato-CAP Acero, ubicado en el sector Las Higueras de la comuna de Talcahuano, que posee una capacidad para 10 500 espectadores. Es uno de los pocos equipos chilenos que poseen un estadio propio.  "
+        app:layout_constraintBottom_toTopOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="224dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:srcCompat="@drawable/cd_huachipato" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,15 +12,15 @@
             android:id="@+id/tab1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/baseline_query_stats_24"
-            android:text="@string/estadisticas" />
+            android:icon="@drawable/baseline_sports_soccer_24"
+            android:text="@string/equipos" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tab2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/baseline_sports_soccer_24"
-            android:text="@string/equipos" />
+            android:icon="@drawable/baseline_query_stats_24"
+            android:text="@string/estadisticas" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tab3"

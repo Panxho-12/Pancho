@@ -13,6 +13,42 @@
         android:theme="@style/Theme.Pancho"
         tools:targetApi="31">
         <activity
+            android:name=".partidocoquimbo"
+            android:exported="false" />
+        <activity
+            android:name=".partidohuachi"
+            android:exported="false" />
+        <activity
+            android:name=".partidocolo"
+            android:exported="false" />
+        <activity
+            android:name=".GameCoquimbo"
+            android:exported="false" />
+        <activity
+            android:name=".GameHuachi"
+            android:exported="false" />
+        <activity
+            android:name=".GameColo"
+            android:exported="false" />
+        <activity
+            android:name=".coquimbostats"
+            android:exported="false" />
+        <activity
+            android:name=".huachistats"
+            android:exported="false" />
+        <activity
+            android:name=".StastColo"
+            android:exported="false" />
+        <activity
+            android:name=".Coquimbo"
+            android:exported="false" />
+        <activity
+            android:name=".Huachi"
+            android:exported="false" />
+        <activity
+            android:name=".Colo"
+            android:exported="false" />
+        <activity
             android:name=".OlvidarCuenta"
             android:exported="false" />
         <activity

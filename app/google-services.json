@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "92944533322",
+    "project_id": "proyectomovil-8b68a",
+    "storage_bucket": "proyectomovil-8b68a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92944533322:android:1e066b2ed17e9ca97c63b3",
+        "android_client_info": {
+          "package_name": "com.example.pancho"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxPwlMaLvqdnyPmCC1QzvexbZvKGDHs0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
