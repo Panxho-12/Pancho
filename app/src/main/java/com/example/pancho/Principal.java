@@ -57,49 +57,7 @@ public class Principal extends AppCompatActivity {
         });
     }
 
-    public void equipo1(View v){
-        Intent i = new Intent(this, Colo.class);
-        startActivity(i);
-    }
-    public void equipo2(View v){
-        Intent i = new Intent(this, Huachi.class);
-        startActivity(i);
-    }
 
-    public void equipo3(View v){
-        Intent i = new Intent(this, Coquimbo.class);
-        startActivity(i);
-    }
-
-    public void colo1(View v){
-        Intent i = new Intent(this, StastColo.class);
-        startActivity(i);
-    }
-
-    public void huachi1(View v){
-        Intent i = new Intent(this, huachistats.class);
-        startActivity(i);
-    }
-
-    public void coquimbo1(View v){
-        Intent i = new Intent(this, coquimbostats.class);
-        startActivity(i);
-    }
-
-    public void partido1(View v){
-        Intent i = new Intent(this, partidocolo.class);
-        startActivity(i);
-    }
-
-    public void partido2(View v){
-        Intent i = new Intent(this, partidohuachi.class);
-        startActivity(i);
-    }
-
-    public void partido3(View v){
-        Intent i = new Intent(this, partidocoquimbo.class);
-        startActivity(i);
-    }
 
 
 }
