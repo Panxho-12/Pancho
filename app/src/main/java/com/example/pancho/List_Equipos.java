@@ -1,10 +1,14 @@
-public class Equipo {
+package com.example.pancho;
 
-    String name;
+public class List_Equipos {
+    public List_Equipos(){
 
-    public Equipo(String name) {
+    }
+    public List_Equipos(String name) {
         this.name = name;
     }
+
+    public String name;
 
     public String getName() {
         return name;

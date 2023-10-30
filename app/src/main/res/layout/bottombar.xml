@@ -28,5 +28,7 @@
             android:layout_height="wrap_content"
             android:icon="@drawable/baseline_gamepad_24"
             android:text="@string/proximosgame" />
+
     </com.google.android.material.tabs.TabLayout>
+
 </LinearLayout>

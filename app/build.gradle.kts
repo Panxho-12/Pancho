@@ -45,5 +45,5 @@ dependencies {
 
     implementation ("com.google.firebase:firebase-auth:19.2.0")
     implementation ("com.google.firebase:firebase-database:19.2.0")
-
+    
 }

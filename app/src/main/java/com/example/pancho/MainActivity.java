@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         SharedPreferences datos = PreferenceManager.getDefaultSharedPreferences(this);
-        String correo = datos.getString("correo","");
-        if(!correo.equals("")){
+        String correo = datos.getString("correo", "");
+        if (!correo.equals("")) {
             Intent i = new Intent(this, Principal.class);
             startActivity(i);
         }
