@@ -40,9 +40,12 @@ public class Principal extends AppCompatActivity {
                         ProximosEncuentros p = new ProximosEncuentros();
                         getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, p).commit();
                         break;
-
+                    case 3:
+                        //llamar al fragmento alineacion
+                        Alineacion a = new Alineacion();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, a).commit();
+                        break;
                 }
-
             }
 
             @Override
