@@ -41,10 +41,9 @@ import java.util.List;
         holder.btnEstadisticas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Obtén el ID o cualquier dato necesario para consultar las estadísticas en el siguiente fragmento
-                String equipoId = mData.get(position).getName(); // Suponiendo que tienes un método getId en tu modelo
-
-                // Aquí puedes iniciar tu fragmento de estadísticas y pasar datos, en este caso, "equipoId"
+                // Obtener el ID
+                String equipoId = mData.get(position).getName(); //
+                // Iniciar el fragmento de estadísticas y pasar datos
                 Estadisticas estadisticasFragment = new Estadisticas();
                 Bundle bundle = new Bundle();
                 bundle.putString("equipoId", equipoId);

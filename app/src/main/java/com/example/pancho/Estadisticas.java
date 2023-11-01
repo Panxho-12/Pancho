@@ -72,7 +72,7 @@ public class Estadisticas extends Fragment {
                                 String empates = documentSnapshot.getString("empate");
                                 String posicion = documentSnapshot.getString("posicion");
 
-                                // Aquí puedes usar los datos recuperados para mostrarlos en tus TextViews o realizar otras operaciones necesarias
+                                // Usar los datos recuperados para mostrarlos en tus TextViews
                                 textViewVictorias.setText("Victorias: " + victorias);
                                 textViewDerrotas.setText("Derrotas: " + derrotas);
                                 textViewEmpates.setText("Empates: " + empates);
@@ -81,7 +81,7 @@ public class Estadisticas extends Fragment {
                             }
                         })
                         .addOnFailureListener(e -> {
-                            // Manejo de errores al obtener datos de Firestore
+                            //
                         });
             }
             return rootView;
