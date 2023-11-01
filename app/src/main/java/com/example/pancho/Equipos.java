@@ -19,11 +19,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Equipos#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class Equipos extends Fragment {
 
     private List<List_Equipos> equipos;
@@ -63,7 +59,6 @@ public class Equipos extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_equipos, container, false);
         recyclerView = rootView.findViewById(R.id.listRecycleView);
-
         // Configura el RecyclerView
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -79,13 +74,12 @@ public class Equipos extends Fragment {
         equiposRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                if (!queryDocumentSnapshots.isEmpty()){
-                    for(QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots){
+                if (!queryDocumentSnapshots.isEmpty()) {
+                    for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
                         List_Equipos equipo = documentSnapshot.toObject(List_Equipos.class);
                         equipos.add(equipo);
                     }
-                    listAdapter = new ListAdapterEquipos(equipos,getContext());
-
+                    listAdapter = new ListAdapterEquipos(equipos, getContext());
                     recyclerView.setAdapter(listAdapter);
                     listAdapter.setItems(equipos);
 

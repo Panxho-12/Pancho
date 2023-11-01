@@ -4,20 +4,22 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Estadisticas#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class Estadisticas extends Fragment {
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
+public class Estadisticas extends Fragment {
+    private TextView textViewVictorias;
+    private TextView textViewDerrotas;
+    private TextView textViewEmpates;
+    private TextView textViewPosicionLiga;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -29,15 +31,6 @@ public class Estadisticas extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Estadisticas.
-     */
-    // TODO: Rename and change types and number of parameters
     public static Estadisticas newInstance(String param1, String param2) {
         Estadisticas fragment = new Estadisticas();
         Bundle args = new Bundle();
@@ -59,8 +52,38 @@ public class Estadisticas extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_estadisticas, container, false);
-    }
+        View rootView = inflater.inflate(R.layout.fragment_estadisticas, container, false);
+            textViewVictorias = rootView.findViewById(R.id.textViewVictorias);
+            textViewDerrotas = rootView.findViewById(R.id.textViewDerrotas);
+            textViewEmpates = rootView.findViewById(R.id.textViewEmpates);
+            textViewPosicionLiga = rootView.findViewById(R.id.textViewPosicionLiga);
+            Bundle args = getArguments();
+            if (args != null){
+                String nombreEquipo = args.getString("equipoId");
+                FirebaseFirestore db = FirebaseFirestore.getInstance();
+                CollectionReference estadisticasRef = db.collection("estadisticas");
 
+                estadisticasRef.whereEqualTo("nombreEquipo", nombreEquipo)
+                        .get()
+                        .addOnSuccessListener(queryDocumentSnapshots -> {
+                            for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                                String victorias = documentSnapshot.getString("victorias");
+                                String derrotas = documentSnapshot.getString("derrotas");
+                                String empates = documentSnapshot.getString("empate");
+                                String posicion = documentSnapshot.getString("posicion");
+
+                                // Aquí puedes usar los datos recuperados para mostrarlos en tus TextViews o realizar otras operaciones necesarias
+                                textViewVictorias.setText("Victorias: " + victorias);
+                                textViewDerrotas.setText("Derrotas: " + derrotas);
+                                textViewEmpates.setText("Empates: " + empates);
+                                textViewPosicionLiga.setText("Posición en la Liga: " + posicion);
+                                Log.d("TAG", "DocumentSnapshot data: " + documentSnapshot.getData());
+                            }
+                        })
+                        .addOnFailureListener(e -> {
+                            // Manejo de errores al obtener datos de Firestore
+                        });
+            }
+            return rootView;
+    }
 }
